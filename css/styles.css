@@ -130,6 +130,11 @@ body {
   background-size: cover;
   background-position: center;
 }
+@media only screen and (max-width: 1301px) {
+  body {
+    min-width: 1300px;
+  }
+}
 
 input:focus, select:focus, textarea:focus, button:focus {
   outline: none;
