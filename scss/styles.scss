@@ -1,0 +1,159 @@
+@import 'variables';
+@import 'keyframes';
+
+// CSS
+body,
+html {}
+
+body {
+   position: relative;
+   font-family: $font-regular;
+   color: $color-white;
+   background-color: #1a2a29;
+   min-width: 1440px;
+   min-height: 100vh;
+   margin: 0;
+   padding: 15px 20px;
+   @include background(url(../images/background.jpg), no-repeat, cover, center);
+}
+
+input:focus, select:focus, textarea:focus, button:focus {
+   outline: none;
+}
+
+img { max-width: 100%; }
+
+a {
+   text-decoration: none;
+
+   &:hover {
+      text-decoration: unset;
+      color: inherit;
+   }
+
+   &:focus-visible {
+      outline: 0;
+      outline-offset: none;
+   }
+}
+
+.jconfirm {
+   .jconfirm-box-container {
+      color: #000;
+   }
+
+   .jconfirm-box {
+      .jconfirm-title {
+         font-family: $font-medium
+      }
+   }
+   .jconfirm-content-pane {
+      font-family: $font-light;
+   }
+   
+}
+
+
+@import 'content';
+
+
+.loading-container {
+   display: none;
+   position: absolute;
+   left: 0; top: 0;
+   z-index: 11;
+   width: 100%;
+   height: 100%;
+   background-color: #ffffffb0;
+   @include border-radius(3px);
+   
+
+   .loading-content {
+      @include flex-box();
+      align-items: center;
+      justify-content: center;
+      width: 100%; height: 100%;
+   }
+
+   .loader {
+      // --color-1: #fff;
+      // --color-2: #ff3d00;
+      --color-1: #ff3d00;
+      --color-2: #f3d998;
+      --size: 1.5px;
+
+      transform: rotateZ(45deg);
+      perspective: calc(1000 * var(--size));
+      border-radius: 50%;
+      width: calc(48 * var(--size));
+      height: calc(48 * var(--size));
+      color: var(--color-1);
+   }
+   .loader:before,
+   .loader:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: inherit;
+      height: inherit;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+   }
+   .loader:after {
+      color: var(--color-2);
+      transform: rotateY(70deg);
+      animation-delay: 0.4s;
+   }
+
+   @keyframes rotate {
+      0% {
+         transform: translate(-50%, -50%) rotateZ(0deg);
+      }
+      100% {
+         transform: translate(-50%, -50%) rotateZ(360deg);
+      }
+   }
+
+   @keyframes rotateccw {
+      0% {
+         transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+         transform: translate(-50%, -50%) rotate(-360deg);
+      }
+   }
+
+   @keyframes spin {
+      0%,
+      100% {
+         box-shadow: 0.2em 0 0 0 currentcolor;
+      }
+      12% {
+         box-shadow: 0.2em 0.2em 0 0 currentcolor;
+      }
+      25% {
+         box-shadow: 0 0.2em 0 0 currentcolor;
+      }
+      37% {
+         box-shadow: -0.2em 0.2em 0 0 currentcolor;
+      }
+      50% {
+         box-shadow: -0.2em 0 0 0 currentcolor;
+      }
+      62% {
+         box-shadow: -0.2em -0.2em 0 0 currentcolor;
+      }
+      75% {
+         box-shadow: 0 -0.2em 0 0 currentcolor;
+      }
+      87% {
+         box-shadow: 0.2em -0.2em 0 0 currentcolor;
+      }
+   }
+}
+
+
+@import 'responsive';
