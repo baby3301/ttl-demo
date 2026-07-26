@@ -304,11 +304,15 @@ $height: 500px;
       @include flex-box();
       @include flex-direction(column);
       align-items: center;
+
       .room-highlight {
          background-color: #eb0a18b5;
          border: 2px solid $color-white;
          margin: 0 auto;
-         @include animation(breathe-glow-small 1.25s infinite alternate ease-in-out);
+         // @include animation(breathe-glow-small 1.25s infinite alternate ease-in-out);
+      }
+      .room-highlight-detail {
+
       }
       .line-highlight {
          height: 10px; width: 2px;
@@ -318,7 +322,7 @@ $height: 500px;
       .label-highlight {
          z-index: 1;
          @include box-shadow(rgba(149, 157, 165, 0.2) 0px 8px 24px);
-         position: absolute;
+         // position: absolute;
          padding: 0px 8px;
          @include border-radius(1px);
          background-color: $color-white;
@@ -350,218 +354,156 @@ $height: 500px;
 .highlight-room-container {
    // P1 T5 //
    &.P1-05-01 {
-      display: block;
-      left: 392px; top: 92px;
+      display: block; left: 364px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
-      
    }
    &.P1-05-02 {
-      display: block;
-      left: 377px; top: 92px;
+      display: block; left: 349px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-03 {
-      display: block;
-      left: 362px; top: 92px;
+      display: block; left: 334px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-03A {
-      display: block;
-      left: 347px; top: 92px;
+      display: block; left: 316px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-05 {
-      display: block; left: 332px; top: 92px;
+      display: block; left: 305px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-06 {
-      display: block; left: 317px; top: 92px;
+      display: block; left: 290px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-07 {
-      display: block; left: 302px; top: 92px;
+      display: block; left: 275px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-08 {
-      display: block; left: 287px; top: 92px;
+      display: block; left: 260px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-09 {
-      display: block; left: 271px; top: 92px;
+      display: block; left: 244px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
+      // .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-10 {
-      display: block; left: 256px; top: 92px;
+      display: block; left: 231px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-11 {
-      display: block; left: 242px; top: 92px;
+      display: block; left: 219px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-12 {
-      display: block; left: 214px; top: 92px;
+      display: block; left: 197px; top: 92px;
       .room-highlight { width: 33px; height: 45px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-12A {
-      display: block; left: 200px; top: 92px;
+      display: block; left: 169px; top: 92px;
       .room-highlight { width: 18px; height: 56px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-14 {
-      display: block; left: 185px; top: 92px;
-      .room-highlight { width: 33px; height: 56px; }
-      .label-highlight { bottom: -20px; left: 50%; left: 50%; @include transform(translateX(-50%) ); }
+      display: block; left: 159px; top: 92px;
+      .room-highlight { width: 18px; height: 56px; }
    }
    &.P1-05-15 {
-      display: block;
-      left: 114px; top: 92px;
+      display: block; left: 114px; top: 92px;
       .room-highlight { width: 72px; height: 56px; border-top-left-radius: 5px; }
-      .label-highlight { bottom: -20px; left: 50%; @include transform(translateX(-50%) ); }
    }
    &.P1-05-16 {
-      display: block;
-      left: 114px; top: 43px;
-      .room-highlight { width: 57px; height: 45px; border-top-left-radius: 10px; }
-      .label-highlight { bottom: -20px; }
+      display: block; left: 112px; top: 41px;
+      .room-highlight { width: 63px; height: 45px; border-top-left-radius: 10px; }
+      .room-highlight-detail { @include transform(rotateZ(90deg) translate(-35px, 45px)); }
    }
    &.P1-05-17 {
-      display: block;
-      left: 169px; top: 43px;
+      display: block; left: 145px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P1-05-18 {
-      display: block;
-      left: 185px; top: 43px;
+      display: block; left: 166px; top: 43px;
       .room-highlight { width: 33px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P1-05-19 {
-      display: block;
-      left: 268px; top: 43px;
+      display: block; left: 244px; top: 43px;
       .room-highlight { width: 21px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P1-05-20 {
-      display: block;
-      left: 287px; top: 43px;
+      display: block; left: 261px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P1-05-21 {
-      display: block;
-      left: 302px; top: 43px;
+      display: block; left: 277px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P1-05-22 {
-      display: block;
-      left: 317px; top: 43px;
+      display: block; left: 291px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P1-05-23 {
-      display: block;
-      left: 332px; top: 43px;
+      display: block; left: 306px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P1-05-24 {
-      display: block;
-      left: 347px; top: 43px;
+      display: block; left: 321px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P1-05-25 {
-      display: block;
-      left: 362px; top: 43px;
+      display: block; left: 336px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P1-05-26 {
-      display: block;
-      left: 377px; top: 43px;
+      display: block; left: 351px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    //T5P2
    &.P2-05-11 {
-      display: block;
-      left: 437px; top: 92px;
+      display: block; left: 413px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P2-05-12 {
-      display: block;
-      left: 422px; top: 92px;
+      display: block; left: 399px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P2-05-12A {
-      display: block;
-      left: 407px; top: 92px;
+      display: block; left: 383px; top: 92px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P2-05-14 {
-      display: block;
-      left: 408px; top: 43px;
+      display: block; left: 381px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P2-05-15 {
-      display: block;
-      left: 425px; top: 43px;
+      display: block; left: 396px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P2-05-16 {
-      display: block;
-      left: 440px; top: 43px;
+      display: block; left: 412px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P2-05-17 {
-      display: block;
-      left: 453px; top: 43px;
+      display: block; left: 427px; top: 43px;
       .room-highlight { width: 19px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P2-05-18 {
-      display: block;
-      left: 471px; top: 43px;
+      display: block; left: 450px; top: 43px;
       .room-highlight { width: 29px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P2-05-19 {
-      display: block;
-      left: 497px; top: 43px;
+      display: block; left: 471px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P2-05-20 {
-      display: block;
-      left: 512px; top: 43px;
+      display: block; left: 485px; top: 43px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P2-05-21 {
       display: block;
-      left: 528px; top: 43px;
+      left: 520px; top: 43px;
       .room-highlight { width: 53px; height: 45px; border-top-right-radius: 10px; }
-      .label-highlight { bottom: -20px; }
    }
    // END T5 //
    //
@@ -571,184 +513,150 @@ $height: 500px;
    // T6 and more //
    // P1
    &.P101 {
-      display: block; left: 390px; top: 90px;
+      display: block; left: 364px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P102 {
-      display: block; left: 374px; top: 90px;
+      display: block; left: 348px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P103 {
-      display: block; left: 358px; top: 90px;
+      display: block; left: 332px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P103A {
-      display: block; left: 342px; top: 90px;
-      .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
-   }
-   &.P105 {
-      display: block; left: 327px; top: 90px;
-      .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
-   }
-   &.P106 {
       display: block; left: 311px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
+   }
+   &.P105 {
+      display: block; left: 299px; top: 90px;
+      .room-highlight { width: 18px; height: 45px; }
+   }
+   &.P106 {
+      display: block; left: 285px; top: 90px;
+      .room-highlight { width: 18px; height: 45px; }
    }
    &.P107 {
-      display: block; left: 296px; top: 90px;
+      display: block; left: 270px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P108 {
-      display: block; left: 281px; top: 90px;
+      display: block; left: 254px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P109 {
-      display: block; left: 266px; top: 90px;
+      display: block; left: 238px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P110 {
-      display: block; left: 251px; top: 90px;
+      display: block; left: 225px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P111 {
-      display: block; left: 236px; top: 90px;
+      display: block; left: 212px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P112 {
-      display: block; left: 208px; top: 90px;
+      display: block; left: 188px; top: 90px;
       .room-highlight { width: 29px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P112A {
-      display: block; left: 192px; top: 90px;
+      display: block; left: 162px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P114 {
-      display: block; left: 177px; top: 90px;
+      display: block; left: 151px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P115 {
-      display: block; left: 126px; top: 90px;
+      display: block; left: 117px; top: 90px;
       .room-highlight { width: 53px; height: 45px; border-top-left-radius: 5px; border-bottom-left-radius: 10px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P116 {
-      display: block; left: 126px; top: 40px;
+      display: block; left: 109px; top: 40px;
       .room-highlight { width: 37px; height: 45px; border-top-left-radius: 11px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(90deg) translate(-35px, 45px)); }
    }
    &.P117 {
-      display: block; left: 162px; top: 40px;
+      display: block; left: 135px; top: 40px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P118 {
-      display: block; left: 177px; top: 40px;
+      display: block; left: 159px; top: 40px;
       .room-highlight { width: 33px; height: 45px; border-top-left-radius: 3px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P119 {
-      display: block; left: 262px; top: 40px;
+      display: block; left: 238px; top: 40px;
       .room-highlight { width: 21px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P120 {
-      display: block; left: 282px; top: 40px;
+      display: block; left: 255px; top: 40px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P121 {
-      display: block; left: 297px; top: 40px;
+      display: block; left: 272px; top: 40px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P122 {
-      display: block; left: 312px; top: 40px;
+      display: block; left: 285px; top: 40px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P123 {
-      display: block; left: 327px; top: 40px;
+      display: block; left: 301px; top: 40px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P124 {
-      display: block; left: 343px; top: 40px;
+      display: block; left: 316px; top: 40px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P125 {
-      display: block; left: 358px; top: 40px;
+      display: block; left: 333px; top: 40px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P126 {
-      display: block; left: 374px; top: 40px;
+      display: block; left: 347px; top: 40px;
       .room-highlight { width: 19px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
 
    // P2 //
    &.P201 {
-      display: block; left: 472px; top: 292px;
+      display: block; left: 458px; top: 292px;
       .room-highlight { width: 45px; height: 37px; border-bottom-left-radius: 10px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P202 {
-      display: block; left: 472px; top: 277px;
+      display: block; left: 458px; top: 277px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P203 {
-      display: block; left: 472px; top: 261px;
+      display: block; left: 458px; top: 261px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P203A {
-      display: block; left: 472px; top: 246px;
+      display: block; left: 458px; top: 246px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P205 {
-      display: block; left: 472px; top: 230px;
+      display: block; left: 458px; top: 230px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P206 {
-      display: block; left: 472px; top: 215px;
+      display: block; left: 458px; top: 215px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P207 {
-      display: block; left: 472px; top: 200px;
+      display: block; left: 458px; top: 200px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P208 {
-      display: block; left: 472px; top: 184px;
+      display: block; left: 458px; top: 184px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P209 {
-      display: block; left: 472px; top: 168px;
+      display: block; left: 458px; top: 168px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P210 {
-      display: block; left: 472px; top: 142px;
+      display: block; left: 452px; top: 142px;
       .room-highlight {
          position: relative;
          width: 32px; height: 16px; 
@@ -774,128 +682,119 @@ $height: 500px;
             z-index: 0;
          }
       }
-      .line-highlight { @include transform(translateY(12px)); }
-      .label-highlight { bottom: -32px; }
+      .line-highlight {}
+      .room-highlight-detail {@include transform(translateY(12px));}
+      // .label-highlight { bottom: -32px; }
    }
    &.P211 {
-      display: block; left: 438px; top: 90px;
+      display: block; left: 412px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P212 {
-      display: block; left: 422px; top: 90px;
+      display: block; left: 396px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P212A {
-      display: block; left: 406px; top: 90px;
+      display: block; left: 380px; top: 90px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P214 {
-      display: block; left: 404px; top: 40px;
+      display: block; left: 378px; top: 40px;
       .room-highlight { width: 19px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P215 {
-      display: block; left: 420px; top: 40px;
+      display: block; left: 395px; top: 40px;
       .room-highlight { width: 19px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P216 {
-      display: block; left: 436px; top: 40px;
+      display: block; left: 410px; top: 40px;
       .room-highlight { width: 19px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P217 {
-      display: block; left: 452px; top: 40px;
+      display: block; left: 426px; top: 40px;
       .room-highlight { width: 19px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P218 {
-      display: block; left: 468px; top: 40px;
+      display: block; left: 450px; top: 40px;
       .room-highlight { width: 32px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P219 {
-      display: block; left: 498px; top: 40px;
+      display: block; left: 471px; top: 40px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P220 {
-      display: block; left: 514px; top: 40px;
+      display: block; left: 485px; top: 40px;
       .room-highlight { width: 18px; height: 45px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P221 {
-      display: block; left: 529px; top: 41px;
+      display: block; left: 512px; top: 41px;
       .room-highlight { width: 36px; height: 44px; border-top-right-radius: 10px; }
-      .label-highlight { bottom: -20px; }
    }
    &.P222 {
-      display: block; left: 521px; top: 91px;
+      display: block; left: 507px; top: 91px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
+   //
    &.P223 {
-      display: block; left: 521px; top: 106px;
+      display: block; left: 507px; top: 106px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    &.P224 {
-      display: block; left: 521px; top: 122px;
+      display: block; left: 507px; top: 122px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    &.P225 {
-      display: block; left: 521px; top: 137px;
+      display: block; left: 507px; top: 137px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    &.P226 {
-      display: block; left: 521px; top: 153px;
+      display: block; left: 507px; top: 153px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    &.P227 {
-      display: block; left: 521px; top: 168px;
+      display: block; left: 507px; top: 168px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    &.P228 {
-      display: block; left: 521px; top: 184px;
+      display: block; left: 507px; top: 184px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    &.P229 {
-      display: block; left: 521px; top: 199px;
+      display: block; left: 507px; top: 199px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    &.P230 {
-      display: block; left: 521px; top: 215px;
+      display: block; left: 507px; top: 215px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    &.P231 {
-      display: block; left: 521px; top: 245px;
+      display: block; left: 507px; top: 245px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    &.P232 {
-      display: block; left: 521px; top: 261px;
+      display: block; left: 507px; top: 261px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    &.P233 {
-      display: block; left: 521px; top: 277px;
+      display: block; left: 507px; top: 277px;
       .room-highlight { width: 45px; height: 18px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    &.P234 {
-      display: block; left: 521px; top: 292px;
+      display: block; left: 507px; top: 292px;
       .room-highlight { width: 45px; height: 37px; border-bottom-right-radius: 10px; }
-      .label-highlight { bottom: -20px; }
+      .room-highlight-detail { @include transform(rotateZ(-90deg) translate(24px, 36px)); }
    }
    // END T6 //
    
