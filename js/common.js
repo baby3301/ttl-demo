@@ -1,10 +1,10 @@
 $(document).ready(function () {
-   $('[data-fancybox]').fancybox({
-		hash: false,
-		image: {
-			preload: true // Preload images for a smoother experience
-		}
-	});
+ //   $('[data-fancybox]').fancybox({
+	// 	hash: false,
+	// 	image: {
+	// 		preload: true // Preload images for a smoother experience
+	// 	}
+	// });
 
    document.addEventListener('contextmenu', function(event) {
       // event.preventDefault();
