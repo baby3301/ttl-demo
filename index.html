@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <meta name="author" content="">
+   <title>TTL - Prima Bay</title>
+   <meta name="keywords" content="Trung Thuc Land - Prima Bay" />
+   <meta name="description" content="Trung Thuc Land - Prima Bay">
+   <link rel="shortcut icon" href="images/favicon.png">
+   <!-- SEO -->
+   <meta property="og:locale" content="vi_VN" />
+   <meta property="og:type" content="website" />
+   <meta property="og:title" content="Trung Thuc Land - Prima Bay"/>
+   <meta property="og:site_name" content="https://trungthucland.vn" />
+   <meta property="og:image" content=""/>
+   <meta property="og:description" content="Trung Thuc Land - Prima Bay" />
+   <meta property="og:url" content="" />
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:description" content="" />
+   <meta name="twitter:title" content="" />
+   <meta name="twitter:image" content=""/>
+   <meta name="twitter:image" content="">
+
+   <!-- Bootstrap Core CSS -->
+   <link href="plugins/bootstrap-4.6.1/css/bootstrap.min.css?v=1" rel="stylesheet">
+   <link href="plugins/jquery-confirm/dist/jquery-confirm.min.css?v=1" rel="stylesheet">
+   <link href="plugins/swiper/dist/css/swiper.min.css?v=1" rel="stylesheet">
+   <link href="plugins/fancybox/jquery.fancybox.css?v=1" rel="stylesheet">
+   <link href="plugins/font-awesome/css/all.min.css?v=1" rel="stylesheet">
+   <!-- style -->
+   <link href="css/styles.css?v=180526.2" rel="stylesheet">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+   <div class="page-wrapper">
+      <div class="actions">
+         <div class="input-container">
+            <input type="text" id="search" placeholder="Nhập mã căn (P1-19-06)"/>
+         </div>
+         <div class="action-container">
+            <button class="btn-search" id="btn-search" disabled onclick="searchCode()">TRA CỨU</button>
+            <button class="btn-download" id="btn-export" disabled onclick="exportImage()">TẢI XUỐNG ẢNH</button>
+         </div>
+      </div>
+
+      <div class="previews" id="previews">
+
+         <div class="preview-top">
+            <div class="preview-top-block top-left">
+               <div class="apartment-overview">
+                  <div class="overview-block logo-block">
+                     <img src="./images/logo-group.png" class="" />
+                  </div>
+                  <div class="overview-block code-block">
+                     <div class="code metallic-text" id="code">P1-XX-XX</div>
+                     <div class="line-block left"></div>
+                     <div class="line-block right"></div>
+                  </div>
+                  <div class="overview-block information-block">
+                     
+                     <div class="information-row">
+                        <div class="information-label">Tầng</div>
+                        <div class="information-value" id="floor"></div>
+                     </div>
+                     <div class="information-row">
+                        <div class="information-label">Loại hình</div>
+                        <div class="information-value" id="type"></div>
+                     </div>
+                     <div class="information-row">
+                        <div class="information-label">Diện tích</div>
+                        <div class="information-value" id="area">
+                           <!-- <span id="area"></span> m<sup>2</sup> -->
+                        </div>
+                     </div>
+                     <div class="information-row">
+                        <div class="information-label">View</div>
+                        <div class="information-value" id="view"></div>
+                     </div>
+                  </div>
+               </div>
+               <div class="ground-view">
+                  <div class="title-label">
+                     <p class="text-label">Mặt bằng tầng</p>
+                  </div>
+                  <div class="card card-ground">
+
+                     <div class="loading-container">
+                        <div class="loading-content"><span class="loader"></span></div>
+                     </div>
+
+                     <div class="highlight-room-container" id="ground-highlight-container">
+                        <div class="highlight-room-content">
+                           <div class="room-highlight"></div>
+                           <div class="line-highlight"></div>
+                           <div class="label-highlight"></div>
+                        </div>
+                     </div>
+
+                     <div class="ground-image-container" id="container-ground-view">
+                        <img src="./images/ground-default.jpg" class="" id="ground-img" />
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="preview-top-block top-right">
+               <div class="title-label">
+                  <p class="text-label">Vị trí căn trên toà</p>
+               </div>
+               <div class="card card-3d" id="container-3d-view">
+                  <div class="loading-container">
+                     <div class="loading-content"><span class="loader"></span></div>
+                  </div>
+                  <div class="dot" id="dot-3d"></div>
+
+                  <div class="bg-3d-cover" id="bg-3d-view"></div>
+               </div>
+            </div>
+         </div>
+
+         <div class="preview-bottom">
+            <div class="preview-bottom-block bottom-left">
+               <div class="card card-view">
+
+                  <div class="loading-container">
+                     <div class="loading-content"><span class="loader"></span></div>
+                  </div>
+
+                  <div class="label-direction" id="direction-label">Hướng Đông Nam</div>
+                  <div class="title-label-incard">Hướng View</div>
+                  <div class="bg-view-cover bg-direction" id="bg-direction-view"></div>
+               </div>
+            </div>
+            <div class="preview-bottom-block bottom-right">
+               <div class="card card-view">
+
+                  <div class="loading-container">
+                     <div class="loading-content"><span class="loader"></span></div>
+                  </div>
+
+                  <div class="title-label-incard">Tầm View</div>
+                  <div class="bg-view-cover bg-vision" id="bg-vision-view"></div>
+               </div>
+            </div>
+         </div>
+         
+      </div>
+   </div>
+   
+   <script src="js/jquery.js?v=3.3.1"></script>
+   <script src="plugins/jquery-confirm/dist/jquery-confirm.min.js?v=1"></script>
+   <!-- Bootstrap Core JavaScript -->
+   <script src="plugins/bootstrap-4.6.1/js/bootstrap.min.js?v=1"></script>
+   <script src="plugins/swiper/dist/js/swiper.min.js?v=1"></script>
+   <script src="plugins/fancybox/jquery.fancybox.min.js?v=1"></script>
+
+   <script>
+      let onRun = false;
+      const inputElement = document.getElementById('search');
+      // const errorElement = document.getElementById('errorMessage');
+
+      // const fullRegex = /^(P1|P2)-(0[5-30]|[1-2][0-30]|30)-(0[1-9]|[1-2][0-9]|30)[A-Z]?$/;
+      // const partialRegex = /^P([12](-((0[5-9]|[1-2][0-9]|30)(-((0[1-9]|[1-2][0-9]|30)[A-Z]?|[0-3])?)?|[0-3])?)?)?$/;
+      const fullRegex = /^[A-Z0-9]{2}-[A-Z0-9]{2}-[A-Z0-9]{2,3}$/;
+      const partialRegex = /^([A-Z0-9]{1,2}|[A-Z0-9]{2}-[A-Z0-9]{0,2}|[A-Z0-9]{2}-[A-Z0-9]{2}-[A-Z0-9]{0,3})$/;
+
+      inputElement.addEventListener('input', function(e) {
+         let value = e.target.value.toUpperCase();
+         const isDeleting = e.inputType === 'deleteContentBackward' || e.inputType === 'deleteContentForward';
+
+         if (value === '') {
+            e.target.dataset.oldValue = '';
+            e.target.value = '';
+            inputElement.style.borderColor = '';
+            // errorElement.style.display = 'none';
+            return;
+         }
+
+         if (!isDeleting) {
+            if (/^[A-Z0-9]{2}$/.test(value)) {
+               value += '-';
+            } else if (/^[A-Z0-9]{2}-[A-Z0-9]{2}$/.test(value)) {
+               value += '-';
+            }
+         }
+
+         if (partialRegex.test(value)) {
+            e.target.value = value;
+            e.target.dataset.oldValue = value; 
+         } else {
+            value = e.target.dataset.oldValue || '';
+            e.target.value = value;
+         }
+
+         if (fullRegex.test(value)) {
+            document.getElementById('btn-search').disabled = false;
+            document.getElementById('btn-export').disabled = false;
+            inputElement.style.borderColor = 'green';
+            // errorElement.style.display = 'none';
+         } else {
+            document.getElementById('btn-search').disabled = true;
+            document.getElementById('btn-export').disabled = false;
+            inputElement.style.borderColor = 'red';
+            // errorElement.style.display = 'block';
+         }
+      });
+
+      inputElement.addEventListener("keydown", function(event) {
+         if (event.key === "Enter" && onRun == false) {
+            let value = event.target.value.toUpperCase();
+
+            const regex = /^(P1|P2)-(0[5-9]|[1-2][0-9]|30)-(0[1-9]|[1-2][0-9]|30)[A-Z]?$/;
+            if (fullRegex.test(value)) {
+               searchCode();
+            }
+         }
+      });
+   </script>
+   <!-- Common JS -->
+   <script src="./config/data.js"></script>
+   <script src="./config/coordinates.js"></script>
+   <script src="js/common.js"></script>
+
+
+</body>
+
+</html>
