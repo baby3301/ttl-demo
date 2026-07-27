@@ -309,7 +309,7 @@ a:focus-visible {
   display: grid;
   display: -moz-grid;
   display: -ms-grid;
-  grid-template-columns: 1fr 0.75fr;
+  grid-template-columns: 1fr 1fr;
   gap: 25px;
   margin-bottom: 15px;
   height: 500px;
@@ -522,6 +522,7 @@ a:focus-visible {
 .apartment-overview .overview-block.information-block .information-value {
   font-family: "Semibold";
   color: #f3d998;
+  text-align: right;
 }
 
 .metallic-text {
@@ -538,9 +539,9 @@ a:focus-visible {
   display: grid;
   display: -moz-grid;
   display: -ms-grid;
-  grid-template-columns: 1fr 0.75fr;
+  grid-template-columns: 1fr 1fr;
   gap: 25px;
-  height: 310px;
+  height: 295px;
   z-index: 2;
 }
 .preview-bottom .preview-bottom-block {
@@ -642,11 +643,6 @@ a:focus-visible {
   background-color: rgba(235, 10, 24, 0.7098039216);
   border: 2px solid #ffffff;
   margin: 0 auto;
-  -webkit-animation: breathe-glow-small 1.25s infinite alternate ease-in-out;
-  -moz-animation: breathe-glow-small 1.25s infinite alternate ease-in-out;
-  -ms-animation: breathe-glow-small 1.25s infinite alternate ease-in-out;
-  -o-animation: breathe-glow-small 1.25s infinite alternate ease-in-out;
-  animation: breathe-glow-small 1.25s infinite alternate ease-in-out;
 }
 .highlight-room-container .highlight-room-content .line-highlight {
   height: 10px;
@@ -656,9 +652,9 @@ a:focus-visible {
 }
 .highlight-room-container .highlight-room-content .label-highlight {
   z-index: 1;
-  -webkit-box-shadow: rgba(45, 45, 45, 0.46) 0px 8px 24px;
-  -moz-box-shadow: rgba(45, 45, 45, 0.46) 0px 8px 24px;
-  box-shadow: rgba(45, 45, 45, 0.46) 0px 8px 24px;
+  -webkit-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  -moz-box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 0px 8px;
   border-radius: 1px;
   -webkit-border-radius: 1px;
@@ -678,7 +674,7 @@ a:focus-visible {
 
 .highlight-room-container.P1-05-01 {
   display: block;
-  left: 364px;
+  left: 324px;
   top: 92px;
 }
 .highlight-room-container.P1-05-01 .room-highlight {
@@ -687,7 +683,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-02 {
   display: block;
-  left: 349px;
+  left: 308px;
   top: 92px;
 }
 .highlight-room-container.P1-05-02 .room-highlight {
@@ -696,7 +692,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-03 {
   display: block;
-  left: 334px;
+  left: 292px;
   top: 92px;
 }
 .highlight-room-container.P1-05-03 .room-highlight {
@@ -705,7 +701,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-03A {
   display: block;
-  left: 316px;
+  left: 287px;
   top: 92px;
 }
 .highlight-room-container.P1-05-03A .room-highlight {
@@ -714,7 +710,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-05 {
   display: block;
-  left: 305px;
+  left: 277px;
   top: 92px;
 }
 .highlight-room-container.P1-05-05 .room-highlight {
@@ -723,7 +719,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-06 {
   display: block;
-  left: 290px;
+  left: 246px;
   top: 92px;
 }
 .highlight-room-container.P1-05-06 .room-highlight {
@@ -732,7 +728,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-07 {
   display: block;
-  left: 275px;
+  left: 231px;
   top: 92px;
 }
 .highlight-room-container.P1-05-07 .room-highlight {
@@ -741,7 +737,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-08 {
   display: block;
-  left: 260px;
+  left: 217px;
   top: 92px;
 }
 .highlight-room-container.P1-05-08 .room-highlight {
@@ -750,7 +746,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-09 {
   display: block;
-  left: 244px;
+  left: 202px;
   top: 92px;
 }
 .highlight-room-container.P1-05-09 .room-highlight {
@@ -759,7 +755,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-10 {
   display: block;
-  left: 231px;
+  left: 189px;
   top: 92px;
 }
 .highlight-room-container.P1-05-10 .room-highlight {
@@ -768,7 +764,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-11 {
   display: block;
-  left: 219px;
+  left: 175px;
   top: 92px;
 }
 .highlight-room-container.P1-05-11 .room-highlight {
@@ -777,16 +773,16 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-12 {
   display: block;
-  left: 197px;
+  left: 152px;
   top: 92px;
 }
 .highlight-room-container.P1-05-12 .room-highlight {
-  width: 33px;
+  width: 30px;
   height: 45px;
 }
 .highlight-room-container.P1-05-12A {
   display: block;
-  left: 169px;
+  left: 127px;
   top: 92px;
 }
 .highlight-room-container.P1-05-12A .room-highlight {
@@ -795,7 +791,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-14 {
   display: block;
-  left: 159px;
+  left: 115px;
   top: 92px;
 }
 .highlight-room-container.P1-05-14 .room-highlight {
@@ -804,7 +800,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-15 {
   display: block;
-  left: 114px;
+  left: 70px;
   top: 92px;
 }
 .highlight-room-container.P1-05-15 .room-highlight {
@@ -814,11 +810,11 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-16 {
   display: block;
-  left: 108px;
+  left: 64px;
   top: 41px;
 }
 .highlight-room-container.P1-05-16 .room-highlight {
-  width: 56px;
+  width: 59px;
   height: 45px;
   border-top-left-radius: 10px;
 }
@@ -831,7 +827,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-17 {
   display: block;
-  left: 145px;
+  left: 101px;
   top: 43px;
 }
 .highlight-room-container.P1-05-17 .room-highlight {
@@ -840,7 +836,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-18 {
   display: block;
-  left: 166px;
+  left: 123px;
   top: 43px;
 }
 .highlight-room-container.P1-05-18 .room-highlight {
@@ -849,7 +845,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-19 {
   display: block;
-  left: 244px;
+  left: 200px;
   top: 43px;
 }
 .highlight-room-container.P1-05-19 .room-highlight {
@@ -858,7 +854,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-20 {
   display: block;
-  left: 261px;
+  left: 217px;
   top: 43px;
 }
 .highlight-room-container.P1-05-20 .room-highlight {
@@ -867,7 +863,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-21 {
   display: block;
-  left: 277px;
+  left: 234px;
   top: 43px;
 }
 .highlight-room-container.P1-05-21 .room-highlight {
@@ -876,7 +872,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-22 {
   display: block;
-  left: 291px;
+  left: 247px;
   top: 43px;
 }
 .highlight-room-container.P1-05-22 .room-highlight {
@@ -885,7 +881,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-23 {
   display: block;
-  left: 306px;
+  left: 262px;
   top: 43px;
 }
 .highlight-room-container.P1-05-23 .room-highlight {
@@ -894,7 +890,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-24 {
   display: block;
-  left: 321px;
+  left: 277px;
   top: 43px;
 }
 .highlight-room-container.P1-05-24 .room-highlight {
@@ -903,7 +899,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-25 {
   display: block;
-  left: 336px;
+  left: 292px;
   top: 43px;
 }
 .highlight-room-container.P1-05-25 .room-highlight {
@@ -912,7 +908,7 @@ a:focus-visible {
 }
 .highlight-room-container.P1-05-26 {
   display: block;
-  left: 351px;
+  left: 307px;
   top: 43px;
 }
 .highlight-room-container.P1-05-26 .room-highlight {
@@ -921,7 +917,7 @@ a:focus-visible {
 }
 .highlight-room-container.P2-05-11 {
   display: block;
-  left: 413px;
+  left: 369px;
   top: 92px;
 }
 .highlight-room-container.P2-05-11 .room-highlight {
@@ -930,7 +926,7 @@ a:focus-visible {
 }
 .highlight-room-container.P2-05-12 {
   display: block;
-  left: 399px;
+  left: 353px;
   top: 92px;
 }
 .highlight-room-container.P2-05-12 .room-highlight {
@@ -939,7 +935,7 @@ a:focus-visible {
 }
 .highlight-room-container.P2-05-12A {
   display: block;
-  left: 383px;
+  left: 333px;
   top: 92px;
 }
 .highlight-room-container.P2-05-12A .room-highlight {
@@ -948,7 +944,7 @@ a:focus-visible {
 }
 .highlight-room-container.P2-05-14 {
   display: block;
-  left: 381px;
+  left: 337px;
   top: 43px;
 }
 .highlight-room-container.P2-05-14 .room-highlight {
@@ -957,7 +953,7 @@ a:focus-visible {
 }
 .highlight-room-container.P2-05-15 {
   display: block;
-  left: 396px;
+  left: 354px;
   top: 43px;
 }
 .highlight-room-container.P2-05-15 .room-highlight {
@@ -966,7 +962,7 @@ a:focus-visible {
 }
 .highlight-room-container.P2-05-16 {
   display: block;
-  left: 412px;
+  left: 368px;
   top: 43px;
 }
 .highlight-room-container.P2-05-16 .room-highlight {
@@ -975,7 +971,7 @@ a:focus-visible {
 }
 .highlight-room-container.P2-05-17 {
   display: block;
-  left: 427px;
+  left: 384px;
   top: 43px;
 }
 .highlight-room-container.P2-05-17 .room-highlight {
@@ -984,7 +980,7 @@ a:focus-visible {
 }
 .highlight-room-container.P2-05-18 {
   display: block;
-  left: 450px;
+  left: 406px;
   top: 43px;
 }
 .highlight-room-container.P2-05-18 .room-highlight {
@@ -993,7 +989,7 @@ a:focus-visible {
 }
 .highlight-room-container.P2-05-19 {
   display: block;
-  left: 471px;
+  left: 428px;
   top: 43px;
 }
 .highlight-room-container.P2-05-19 .room-highlight {
@@ -1002,7 +998,7 @@ a:focus-visible {
 }
 .highlight-room-container.P2-05-20 {
   display: block;
-  left: 485px;
+  left: 441px;
   top: 43px;
 }
 .highlight-room-container.P2-05-20 .room-highlight {
@@ -1011,7 +1007,7 @@ a:focus-visible {
 }
 .highlight-room-container.P2-05-21 {
   display: block;
-  left: 520px;
+  left: 476px;
   top: 43px;
 }
 .highlight-room-container.P2-05-21 .room-highlight {
@@ -1021,7 +1017,7 @@ a:focus-visible {
 }
 .highlight-room-container.P101 {
   display: block;
-  left: 364px;
+  left: 323px;
   top: 90px;
 }
 .highlight-room-container.P101 .room-highlight {
@@ -1030,7 +1026,7 @@ a:focus-visible {
 }
 .highlight-room-container.P102 {
   display: block;
-  left: 348px;
+  left: 307px;
   top: 90px;
 }
 .highlight-room-container.P102 .room-highlight {
@@ -1039,7 +1035,7 @@ a:focus-visible {
 }
 .highlight-room-container.P103 {
   display: block;
-  left: 332px;
+  left: 291px;
   top: 90px;
 }
 .highlight-room-container.P103 .room-highlight {
@@ -1048,7 +1044,7 @@ a:focus-visible {
 }
 .highlight-room-container.P103A {
   display: block;
-  left: 311px;
+  left: 272px;
   top: 90px;
 }
 .highlight-room-container.P103A .room-highlight {
@@ -1057,7 +1053,7 @@ a:focus-visible {
 }
 .highlight-room-container.P105 {
   display: block;
-  left: 299px;
+  left: 260px;
   top: 90px;
 }
 .highlight-room-container.P105 .room-highlight {
@@ -1066,7 +1062,7 @@ a:focus-visible {
 }
 .highlight-room-container.P106 {
   display: block;
-  left: 285px;
+  left: 244px;
   top: 90px;
 }
 .highlight-room-container.P106 .room-highlight {
@@ -1075,7 +1071,7 @@ a:focus-visible {
 }
 .highlight-room-container.P107 {
   display: block;
-  left: 270px;
+  left: 229px;
   top: 90px;
 }
 .highlight-room-container.P107 .room-highlight {
@@ -1084,7 +1080,7 @@ a:focus-visible {
 }
 .highlight-room-container.P108 {
   display: block;
-  left: 254px;
+  left: 213px;
   top: 90px;
 }
 .highlight-room-container.P108 .room-highlight {
@@ -1093,7 +1089,7 @@ a:focus-visible {
 }
 .highlight-room-container.P109 {
   display: block;
-  left: 238px;
+  left: 197px;
   top: 90px;
 }
 .highlight-room-container.P109 .room-highlight {
@@ -1102,7 +1098,7 @@ a:focus-visible {
 }
 .highlight-room-container.P110 {
   display: block;
-  left: 225px;
+  left: 184px;
   top: 90px;
 }
 .highlight-room-container.P110 .room-highlight {
@@ -1111,7 +1107,7 @@ a:focus-visible {
 }
 .highlight-room-container.P111 {
   display: block;
-  left: 212px;
+  left: 171px;
   top: 90px;
 }
 .highlight-room-container.P111 .room-highlight {
@@ -1120,7 +1116,7 @@ a:focus-visible {
 }
 .highlight-room-container.P112 {
   display: block;
-  left: 188px;
+  left: 148px;
   top: 90px;
 }
 .highlight-room-container.P112 .room-highlight {
@@ -1129,7 +1125,7 @@ a:focus-visible {
 }
 .highlight-room-container.P112A {
   display: block;
-  left: 162px;
+  left: 121px;
   top: 90px;
 }
 .highlight-room-container.P112A .room-highlight {
@@ -1138,7 +1134,7 @@ a:focus-visible {
 }
 .highlight-room-container.P114 {
   display: block;
-  left: 151px;
+  left: 111px;
   top: 90px;
 }
 .highlight-room-container.P114 .room-highlight {
@@ -1147,7 +1143,7 @@ a:focus-visible {
 }
 .highlight-room-container.P115 {
   display: block;
-  left: 117px;
+  left: 77px;
   top: 90px;
 }
 .highlight-room-container.P115 .room-highlight {
@@ -1158,7 +1154,7 @@ a:focus-visible {
 }
 .highlight-room-container.P116 {
   display: block;
-  left: 109px;
+  left: 69px;
   top: 40px;
 }
 .highlight-room-container.P116 .room-highlight {
@@ -1167,15 +1163,15 @@ a:focus-visible {
   border-top-left-radius: 11px;
 }
 .highlight-room-container.P116 .room-highlight-detail {
-  transform: rotateZ(90deg) translate(-35px, 45px);
-  -webkit-transform: rotateZ(90deg) translate(-35px, 45px);
-  -moz-transform: rotateZ(90deg) translate(-35px, 45px);
-  -ms-transform: rotateZ(90deg) translate(-35px, 45px);
-  -o-transform: rotateZ(90deg) translate(-35px, 45px);
+  transform: rotateZ(90deg) translate(-34px, 33px);
+  -webkit-transform: rotateZ(90deg) translate(-34px, 33px);
+  -moz-transform: rotateZ(90deg) translate(-34px, 33px);
+  -ms-transform: rotateZ(90deg) translate(-34px, 33px);
+  -o-transform: rotateZ(90deg) translate(-34px, 33px);
 }
 .highlight-room-container.P117 {
   display: block;
-  left: 135px;
+  left: 95px;
   top: 40px;
 }
 .highlight-room-container.P117 .room-highlight {
@@ -1184,7 +1180,7 @@ a:focus-visible {
 }
 .highlight-room-container.P118 {
   display: block;
-  left: 159px;
+  left: 118px;
   top: 40px;
 }
 .highlight-room-container.P118 .room-highlight {
@@ -1194,7 +1190,7 @@ a:focus-visible {
 }
 .highlight-room-container.P119 {
   display: block;
-  left: 238px;
+  left: 198px;
   top: 40px;
 }
 .highlight-room-container.P119 .room-highlight {
@@ -1203,7 +1199,7 @@ a:focus-visible {
 }
 .highlight-room-container.P120 {
   display: block;
-  left: 255px;
+  left: 214px;
   top: 40px;
 }
 .highlight-room-container.P120 .room-highlight {
@@ -1212,7 +1208,7 @@ a:focus-visible {
 }
 .highlight-room-container.P121 {
   display: block;
-  left: 272px;
+  left: 231px;
   top: 40px;
 }
 .highlight-room-container.P121 .room-highlight {
@@ -1221,7 +1217,7 @@ a:focus-visible {
 }
 .highlight-room-container.P122 {
   display: block;
-  left: 285px;
+  left: 245px;
   top: 40px;
 }
 .highlight-room-container.P122 .room-highlight {
@@ -1230,7 +1226,7 @@ a:focus-visible {
 }
 .highlight-room-container.P123 {
   display: block;
-  left: 301px;
+  left: 261px;
   top: 40px;
 }
 .highlight-room-container.P123 .room-highlight {
@@ -1239,7 +1235,7 @@ a:focus-visible {
 }
 .highlight-room-container.P124 {
   display: block;
-  left: 316px;
+  left: 276px;
   top: 40px;
 }
 .highlight-room-container.P124 .room-highlight {
@@ -1248,7 +1244,7 @@ a:focus-visible {
 }
 .highlight-room-container.P125 {
   display: block;
-  left: 333px;
+  left: 292px;
   top: 40px;
 }
 .highlight-room-container.P125 .room-highlight {
@@ -1257,7 +1253,7 @@ a:focus-visible {
 }
 .highlight-room-container.P126 {
   display: block;
-  left: 347px;
+  left: 308px;
   top: 40px;
 }
 .highlight-room-container.P126 .room-highlight {
@@ -1266,7 +1262,7 @@ a:focus-visible {
 }
 .highlight-room-container.P201 {
   display: block;
-  left: 458px;
+  left: 413px;
   top: 292px;
 }
 .highlight-room-container.P201 .room-highlight {
@@ -1276,175 +1272,79 @@ a:focus-visible {
 }
 .highlight-room-container.P202 {
   display: block;
-  left: 470px;
+  left: 413px;
   top: 277px;
 }
 .highlight-room-container.P202 .room-highlight {
   width: 45px;
   height: 18px;
 }
-.highlight-room-container.P202 .room-highlight-detail {
-  transform: rotateZ(90deg) translate(-51px, 64px);
-  -webkit-transform: rotateZ(90deg) translate(-51px, 64px);
-  -moz-transform: rotateZ(90deg) translate(-51px, 64px);
-  -ms-transform: rotateZ(90deg) translate(-51px, 64px);
-  -o-transform: rotateZ(90deg) translate(-51px, 64px);
-}
-.highlight-room-container.P202 .label-highlight {
-  padding: 8px 0;
-  writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
-}
 .highlight-room-container.P203 {
   display: block;
-  left: 470px;
+  left: 413px;
   top: 261px;
 }
 .highlight-room-container.P203 .room-highlight {
   width: 45px;
   height: 18px;
 }
-.highlight-room-container.P203 .room-highlight-detail {
-  transform: rotateZ(90deg) translate(-51px, 64px);
-  -webkit-transform: rotateZ(90deg) translate(-51px, 64px);
-  -moz-transform: rotateZ(90deg) translate(-51px, 64px);
-  -ms-transform: rotateZ(90deg) translate(-51px, 64px);
-  -o-transform: rotateZ(90deg) translate(-51px, 64px);
-}
-.highlight-room-container.P203 .label-highlight {
-  padding: 8px 0;
-  writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
-}
 .highlight-room-container.P203A {
   display: block;
-  left: 470px;
+  left: 413px;
   top: 246px;
 }
 .highlight-room-container.P203A .room-highlight {
   width: 45px;
   height: 18px;
 }
-.highlight-room-container.P203A .room-highlight-detail {
-  transform: rotateZ(90deg) translate(-56px, 68px);
-  -webkit-transform: rotateZ(90deg) translate(-56px, 68px);
-  -moz-transform: rotateZ(90deg) translate(-56px, 68px);
-  -ms-transform: rotateZ(90deg) translate(-56px, 68px);
-  -o-transform: rotateZ(90deg) translate(-56px, 68px);
-}
-.highlight-room-container.P203A .label-highlight {
-  padding: 8px 0;
-  writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
-}
 .highlight-room-container.P205 {
   display: block;
-  left: 470px;
+  left: 413px;
   top: 230px;
 }
 .highlight-room-container.P205 .room-highlight {
   width: 45px;
   height: 18px;
 }
-.highlight-room-container.P205 .room-highlight-detail {
-  transform: rotateZ(90deg) translate(-51px, 64px);
-  -webkit-transform: rotateZ(90deg) translate(-51px, 64px);
-  -moz-transform: rotateZ(90deg) translate(-51px, 64px);
-  -ms-transform: rotateZ(90deg) translate(-51px, 64px);
-  -o-transform: rotateZ(90deg) translate(-51px, 64px);
-}
-.highlight-room-container.P205 .label-highlight {
-  padding: 8px 0;
-  writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
-}
 .highlight-room-container.P206 {
   display: block;
-  left: 470px;
+  left: 413px;
   top: 215px;
 }
 .highlight-room-container.P206 .room-highlight {
   width: 45px;
   height: 18px;
 }
-.highlight-room-container.P206 .room-highlight-detail {
-  transform: rotateZ(90deg) translate(-51px, 64px);
-  -webkit-transform: rotateZ(90deg) translate(-51px, 64px);
-  -moz-transform: rotateZ(90deg) translate(-51px, 64px);
-  -ms-transform: rotateZ(90deg) translate(-51px, 64px);
-  -o-transform: rotateZ(90deg) translate(-51px, 64px);
-}
-.highlight-room-container.P206 .label-highlight {
-  padding: 8px 0;
-  writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
-}
 .highlight-room-container.P207 {
   display: block;
-  left: 470px;
+  left: 413px;
   top: 200px;
 }
 .highlight-room-container.P207 .room-highlight {
   width: 45px;
   height: 18px;
 }
-.highlight-room-container.P207 .room-highlight-detail {
-  transform: rotateZ(90deg) translate(-51px, 64px);
-  -webkit-transform: rotateZ(90deg) translate(-51px, 64px);
-  -moz-transform: rotateZ(90deg) translate(-51px, 64px);
-  -ms-transform: rotateZ(90deg) translate(-51px, 64px);
-  -o-transform: rotateZ(90deg) translate(-51px, 64px);
-}
-.highlight-room-container.P207 .label-highlight {
-  padding: 8px 0;
-  writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
-}
 .highlight-room-container.P208 {
   display: block;
-  left: 470px;
+  left: 413px;
   top: 184px;
 }
 .highlight-room-container.P208 .room-highlight {
   width: 45px;
   height: 18px;
 }
-.highlight-room-container.P208 .room-highlight-detail {
-  transform: rotateZ(90deg) translate(-51px, 64px);
-  -webkit-transform: rotateZ(90deg) translate(-51px, 64px);
-  -moz-transform: rotateZ(90deg) translate(-51px, 64px);
-  -ms-transform: rotateZ(90deg) translate(-51px, 64px);
-  -o-transform: rotateZ(90deg) translate(-51px, 64px);
-}
-.highlight-room-container.P208 .label-highlight {
-  padding: 8px 0;
-  writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
-}
 .highlight-room-container.P209 {
   display: block;
-  left: 470px;
+  left: 413px;
   top: 168px;
 }
 .highlight-room-container.P209 .room-highlight {
   width: 45px;
   height: 18px;
 }
-.highlight-room-container.P209 .room-highlight-detail {
-  transform: rotateZ(90deg) translate(-51px, 64px);
-  -webkit-transform: rotateZ(90deg) translate(-51px, 64px);
-  -moz-transform: rotateZ(90deg) translate(-51px, 64px);
-  -ms-transform: rotateZ(90deg) translate(-51px, 64px);
-  -o-transform: rotateZ(90deg) translate(-51px, 64px);
-}
-.highlight-room-container.P209 .label-highlight {
-  padding: 8px 0;
-  writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
-}
 .highlight-room-container.P210 {
   display: block;
-  left: 472px;
+  left: 409px;
   top: 142px;
 }
 .highlight-room-container.P210 .room-highlight {
@@ -1477,20 +1377,15 @@ a:focus-visible {
   z-index: 0;
 }
 .highlight-room-container.P210 .room-highlight-detail {
-  transform: rotateZ(90deg) translate(-41px, 57px);
-  -webkit-transform: rotateZ(90deg) translate(-41px, 57px);
-  -moz-transform: rotateZ(90deg) translate(-41px, 57px);
-  -ms-transform: rotateZ(90deg) translate(-41px, 57px);
-  -o-transform: rotateZ(90deg) translate(-41px, 57px);
-}
-.highlight-room-container.P210 .label-highlight {
-  padding: 8px 0;
-  writing-mode: sideways-lr;
-  -ms-writing-mode: sideways-lr;
+  transform: translateY(12px);
+  -webkit-transform: translateY(12px);
+  -moz-transform: translateY(12px);
+  -ms-transform: translateY(12px);
+  -o-transform: translateY(12px);
 }
 .highlight-room-container.P211 {
   display: block;
-  left: 412px;
+  left: 367px;
   top: 90px;
 }
 .highlight-room-container.P211 .room-highlight {
@@ -1499,7 +1394,7 @@ a:focus-visible {
 }
 .highlight-room-container.P212 {
   display: block;
-  left: 395px;
+  left: 350px;
   top: 90px;
 }
 .highlight-room-container.P212 .room-highlight {
@@ -1508,7 +1403,7 @@ a:focus-visible {
 }
 .highlight-room-container.P212A {
   display: block;
-  left: 374px;
+  left: 331px;
   top: 90px;
 }
 .highlight-room-container.P212A .room-highlight {
@@ -1517,7 +1412,7 @@ a:focus-visible {
 }
 .highlight-room-container.P214 {
   display: block;
-  left: 378px;
+  left: 334px;
   top: 40px;
 }
 .highlight-room-container.P214 .room-highlight {
@@ -1526,7 +1421,7 @@ a:focus-visible {
 }
 .highlight-room-container.P215 {
   display: block;
-  left: 395px;
+  left: 350px;
   top: 40px;
 }
 .highlight-room-container.P215 .room-highlight {
@@ -1535,7 +1430,7 @@ a:focus-visible {
 }
 .highlight-room-container.P216 {
   display: block;
-  left: 410px;
+  left: 367px;
   top: 40px;
 }
 .highlight-room-container.P216 .room-highlight {
@@ -1544,7 +1439,7 @@ a:focus-visible {
 }
 .highlight-room-container.P217 {
   display: block;
-  left: 426px;
+  left: 383px;
   top: 40px;
 }
 .highlight-room-container.P217 .room-highlight {
@@ -1553,7 +1448,7 @@ a:focus-visible {
 }
 .highlight-room-container.P218 {
   display: block;
-  left: 450px;
+  left: 406px;
   top: 40px;
 }
 .highlight-room-container.P218 .room-highlight {
@@ -1562,7 +1457,7 @@ a:focus-visible {
 }
 .highlight-room-container.P219 {
   display: block;
-  left: 471px;
+  left: 426px;
   top: 40px;
 }
 .highlight-room-container.P219 .room-highlight {
@@ -1571,7 +1466,7 @@ a:focus-visible {
 }
 .highlight-room-container.P220 {
   display: block;
-  left: 485px;
+  left: 440px;
   top: 40px;
 }
 .highlight-room-container.P220 .room-highlight {
@@ -1580,7 +1475,7 @@ a:focus-visible {
 }
 .highlight-room-container.P221 {
   display: block;
-  left: 512px;
+  left: 468px;
   top: 41px;
 }
 .highlight-room-container.P221 .room-highlight {
@@ -1588,23 +1483,9 @@ a:focus-visible {
   height: 44px;
   border-top-right-radius: 10px;
 }
-.highlight-room-container.P221 .room-highlight-detail {
-  transform: rotateZ(-90deg) translate(35px, 33px);
-  -webkit-transform: rotateZ(-90deg) translate(35px, 33px);
-  -moz-transform: rotateZ(-90deg) translate(35px, 33px);
-  -ms-transform: rotateZ(-90deg) translate(35px, 33px);
-  -o-transform: rotateZ(-90deg) translate(35px, 33px);
-}
-.highlight-room-container.P221 .label-highlight {
-  transform: rotate(90deg) translateX(27px);
-  -webkit-transform: rotate(90deg) translateX(27px);
-  -moz-transform: rotate(90deg) translateX(27px);
-  -ms-transform: rotate(90deg) translateX(27px);
-  -o-transform: rotate(90deg) translateX(27px);
-}
 .highlight-room-container.P222 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 91px;
 }
 .highlight-room-container.P222 .room-highlight {
@@ -1618,16 +1499,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P222 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P223 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 106px;
 }
 .highlight-room-container.P223 .room-highlight {
@@ -1641,16 +1515,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P223 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P224 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 122px;
 }
 .highlight-room-container.P224 .room-highlight {
@@ -1664,16 +1531,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P224 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P225 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 137px;
 }
 .highlight-room-container.P225 .room-highlight {
@@ -1687,16 +1547,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P225 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P226 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 153px;
 }
 .highlight-room-container.P226 .room-highlight {
@@ -1710,16 +1563,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P226 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P227 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 168px;
 }
 .highlight-room-container.P227 .room-highlight {
@@ -1733,16 +1579,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P227 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P228 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 184px;
 }
 .highlight-room-container.P228 .room-highlight {
@@ -1756,16 +1595,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P228 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P229 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 199px;
 }
 .highlight-room-container.P229 .room-highlight {
@@ -1779,16 +1611,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P229 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P230 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 215px;
 }
 .highlight-room-container.P230 .room-highlight {
@@ -1802,16 +1627,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P230 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P231 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 245px;
 }
 .highlight-room-container.P231 .room-highlight {
@@ -1825,16 +1643,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P231 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P232 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 261px;
 }
 .highlight-room-container.P232 .room-highlight {
@@ -1848,16 +1659,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P232 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P233 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 277px;
 }
 .highlight-room-container.P233 .room-highlight {
@@ -1871,16 +1675,9 @@ a:focus-visible {
   -ms-transform: rotateZ(-90deg) translate(24px, 36px);
   -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
-.highlight-room-container.P233 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
-}
 .highlight-room-container.P234 {
   display: block;
-  left: 507px;
+  left: 464px;
   top: 292px;
 }
 .highlight-room-container.P234 .room-highlight {
@@ -1889,18 +1686,11 @@ a:focus-visible {
   border-bottom-right-radius: 10px;
 }
 .highlight-room-container.P234 .room-highlight-detail {
-  transform: rotateZ(-90deg) translate(34px, 36px);
-  -webkit-transform: rotateZ(-90deg) translate(34px, 36px);
-  -moz-transform: rotateZ(-90deg) translate(34px, 36px);
-  -ms-transform: rotateZ(-90deg) translate(34px, 36px);
-  -o-transform: rotateZ(-90deg) translate(34px, 36px);
-}
-.highlight-room-container.P234 .label-highlight {
-  transform: rotate(90deg) translateX(26px);
-  -webkit-transform: rotate(90deg) translateX(26px);
-  -moz-transform: rotate(90deg) translateX(26px);
-  -ms-transform: rotate(90deg) translateX(26px);
-  -o-transform: rotate(90deg) translateX(26px);
+  transform: rotateZ(-90deg) translate(24px, 36px);
+  -webkit-transform: rotateZ(-90deg) translate(24px, 36px);
+  -moz-transform: rotateZ(-90deg) translate(24px, 36px);
+  -ms-transform: rotateZ(-90deg) translate(24px, 36px);
+  -o-transform: rotateZ(-90deg) translate(24px, 36px);
 }
 
 .loading-container {
