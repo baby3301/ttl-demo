@@ -124,6 +124,7 @@ function getConfigByCode(code) {
    // console.log(cdns)
    result.classCode = `${firstChar}${thirdChar}`;
    result.realFloor = secondChar;
+	result.searchCode = code;
    result.coordinates = cdns;
    return result;
 } 
@@ -154,7 +155,7 @@ function setHighlightInGround(configData)
       classCode = configData.classCode;
    }
 
-   document.querySelector('#ground-highlight-container .label-highlight').textContent = configData.code;
+   document.querySelector('#ground-highlight-container .label-highlight').textContent = configData.searchCode;
    elementGround.className = "highlight-room-container " + classCode;
 }
 
