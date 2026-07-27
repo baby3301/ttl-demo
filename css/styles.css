@@ -643,6 +643,11 @@ a:focus-visible {
   background-color: rgba(235, 10, 24, 0.7098039216);
   border: 2px solid #ffffff;
   margin: 0 auto;
+  -webkit-animation: breathe-glow-small 1.25s infinite alternate ease-in-out;
+  -moz-animation: breathe-glow-small 1.25s infinite alternate ease-in-out;
+  -ms-animation: breathe-glow-small 1.25s infinite alternate ease-in-out;
+  -o-animation: breathe-glow-small 1.25s infinite alternate ease-in-out;
+  animation: breathe-glow-small 1.25s infinite alternate ease-in-out;
 }
 .highlight-room-container .highlight-room-content .line-highlight {
   height: 10px;

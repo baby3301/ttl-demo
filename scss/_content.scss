@@ -310,7 +310,7 @@ $height: 500px;
          background-color: #eb0a18b5;
          border: 2px solid $color-white;
          margin: 0 auto;
-         // @include animation(breathe-glow-small 1.25s infinite alternate ease-in-out);
+         @include animation(breathe-glow-small 1.25s infinite alternate ease-in-out);
       }
       .room-highlight-detail {
 
