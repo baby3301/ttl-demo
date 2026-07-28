@@ -573,10 +573,10 @@ const apartmentData = {
             "area": 31.29,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          },
          "23": {
@@ -585,10 +585,10 @@ const apartmentData = {
             "area": 32.26,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          },
          "24": {
@@ -597,10 +597,10 @@ const apartmentData = {
             "area": 32.26,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          },
          "25": {
@@ -609,10 +609,10 @@ const apartmentData = {
             "area": 31.29,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          },
          "26": {
@@ -621,10 +621,10 @@ const apartmentData = {
             "area": 32.55,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          }
       }
@@ -927,10 +927,10 @@ const apartmentData = {
             "area": 32.55,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          },
          "15": {
@@ -939,10 +939,10 @@ const apartmentData = {
             "area": 31.29,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          },
          "16": {
@@ -951,10 +951,10 @@ const apartmentData = {
             "area": 32.26,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          },
          "17": {
@@ -963,10 +963,10 @@ const apartmentData = {
             "area": 37.58,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          },
          "18": {
@@ -975,10 +975,10 @@ const apartmentData = {
             "area": 59.17,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          },
          "19": {
@@ -987,10 +987,10 @@ const apartmentData = {
             "area": 31.26,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          },
          "20": {
@@ -999,10 +999,10 @@ const apartmentData = {
             "area": 31.26,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc",
-            "direction": "bac.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi",
-            "view": "hoangquocviet-nui.jpg",
+            "directionLabel": "Hướng Tây",
+            "direction": "tay.jpg",
+            "view": "bien-halongxanh.jpg",
+            "viewLabel": "Biển - Hạ Long Xanh",
             "position": 3
          },
          "21": {
@@ -1167,8 +1167,8 @@ const apartmentData = {
             "area": 72.41,
             "price": null,
             "floor": 7,
-            "directionLabel": "Hướng Bắc Đông",
-            "direction": "bac-dong.jpg",
+            "directionLabel": "Hướng Bắc",
+            "direction": "bac.jpg",
             "viewLabel": "Núi",
             "view": "nui.jpg",
             "position": 2
