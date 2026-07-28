@@ -190,7 +190,7 @@ const apartmentData = {
             "directionLabel": "Hướng Tây - Đông Nam",
             "direction": "tay-dong-nam.jpg",
             "view": "bien-halongxanh-vinhhalong.jpg",
-            "viewLabel": "Biển - Hạ Long Xanh - Vịnh Hạ Long",
+            "viewLabel": "Biển - Hạ Long Xanh <br/> - Vịnh Hạ Long",
             "position": 1
          },
          "17": {
@@ -504,7 +504,7 @@ const apartmentData = {
             "directionLabel": "Hướng Tây Nam",
             "direction": "tay-nam.jpg",
             "view": "bien-halongxanh-vinhhalong.jpg",
-            "viewLabel": "Biển - Hạ Long Xanh - Vịnh Hạ Long",
+            "viewLabel": "Biển - Hạ Long Xanh <br/> - Vịnh Hạ Long",
             "position": 1
          },
          "17": {
@@ -759,8 +759,8 @@ const apartmentData = {
             "floor": 5,
             "directionLabel": "Hướng Tây Bắc",
             "direction": "tay-bac.jpg",
-            "view": "hqv-nui-halongxanh.jpg",
-            "viewLabel": "Hoàng Quốc Việt - Núi - Hạ Long Xanh",
+            "view": "hoangquocviet-nui-bien-halongxanh.jpg",
+            "viewLabel": "Hoàng Quốc Việt - Núi <br/> - Hạ Long Xanh",
             "position": 3
          }
       },
@@ -1013,7 +1013,7 @@ const apartmentData = {
             "floor": 7,
             "directionLabel": "Hướng Tây Bắc",
             "direction": "tay-bac.jpg",
-            "viewLabel": "Biển - Hạ Long Xanh - Hoàng Quốc Việt - Núi",
+            "viewLabel": "Biển - Hạ Long Xanh - <br/>Hoàng Quốc Việt - Núi",
             "view": "bien-halongxanh-hoangquocviet-nui.jpg",
             "position": 3
          },
