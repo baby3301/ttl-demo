@@ -4,6 +4,13 @@
    @include flex-box();
    @include flex-direction(column);
    padding: 0 30px;
+
+   @media only screen and (max-width: 1300px) {
+      padding: 8px 30px;
+      @include background(url(../images/background.jpg), no-repeat, cover, center);
+      // background: unset;
+   }
+   // @include background(url(../images/background.jpg), no-repeat, cover, center);
 }
 
 .actions {
