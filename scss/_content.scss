@@ -9,19 +9,20 @@
 .actions {
    width: 100%;
    background-color: $color-white;
-   padding: 8px 20px;
+   padding: 4px 20px;
    @include border-radius(12px);
    @include flex-box();
    gap: 15px;
    align-items: center;
    justify-content: space-between;
-   margin-bottom: 15px;
+   margin-bottom: 10px;
    @include box-shadow(0 4px 15px rgba(0, 0, 0, 0.2));
+   font-size: 90%;
 
    .input-container {
       input {
          border: 1.25px solid $color-deep-cyan;
-         padding: 6px 12px;
+         padding: 4px 12px;
          text-transform: uppercase;
          font-family: $font-semibold;
          // font-size: 120%;
@@ -35,7 +36,7 @@
 
    .action-container {
       button {
-         padding: 6px 12px;
+         padding: 4px 12px;
          @include border-radius(12px);
          background-color: $color-deep-cyan;
          margin-left: 5px;
@@ -62,6 +63,7 @@
    width: 100%;
 
    .title-label {
+      display: none;
       text-align: center;
       text-transform: uppercase;
       position: relative;
@@ -84,8 +86,8 @@
 }
 
 $grid-columns: 1fr 1fr;
-$height: 500px;
-
+// $height: 500px;
+$height: 480px;
 //
 .preview-top {
    @include grid();
@@ -248,7 +250,7 @@ $height: 500px;
    @include grid();
    grid-template-columns: $grid-columns;
    gap: 25px;
-   height: calc($height * 0.59);
+   height: calc($height * 0.55);
    z-index: 2;
 
    .preview-bottom-block {

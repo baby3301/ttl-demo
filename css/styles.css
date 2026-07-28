@@ -124,15 +124,21 @@ body {
   min-width: 1440px;
   min-height: 100vh;
   margin: 0;
-  padding: 15px 20px;
+  padding: 8px 20px;
   background-image: url(../images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-@media only screen and (max-width: 1301px) {
+@media only screen and (max-width: 1440px) {
   body {
     min-width: 1300px;
+    padding: 8px 10px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  body {
+    padding: 8px 0;
   }
 }
 
@@ -191,7 +197,7 @@ a:focus-visible {
 .actions {
   width: 100%;
   background-color: #ffffff;
-  padding: 8px 20px;
+  padding: 4px 20px;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -211,14 +217,15 @@ a:focus-visible {
   gap: 15px;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  font-size: 90%;
 }
 .actions .input-container input {
   border: 1.25px solid #254f4d;
-  padding: 6px 12px;
+  padding: 4px 12px;
   text-transform: uppercase;
   font-family: "Semibold";
   color: #254f4d;
@@ -251,7 +258,7 @@ a:focus-visible {
   text-align: left;
 }
 .actions .action-container button {
-  padding: 6px 12px;
+  padding: 4px 12px;
   border-radius: 12px;
   -webkit-border-radius: 12px;
   -moz-border-radius: 12px;
@@ -277,6 +284,7 @@ a:focus-visible {
   width: 100%;
 }
 .previews .title-label {
+  display: none;
   text-align: center;
   text-transform: uppercase;
   position: relative;
@@ -312,7 +320,7 @@ a:focus-visible {
   grid-template-columns: 1fr 1fr;
   gap: 25px;
   margin-bottom: 15px;
-  height: 500px;
+  height: 480px;
   z-index: 2;
 }
 .preview-top .preview-top-block {
@@ -545,7 +553,7 @@ a:focus-visible {
   display: -ms-grid;
   grid-template-columns: 1fr 1fr;
   gap: 25px;
-  height: 295px;
+  height: 264px;
   z-index: 2;
 }
 .preview-bottom .preview-bottom-block {

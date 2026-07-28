@@ -13,10 +13,14 @@ body {
    min-width: 1440px;
    min-height: 100vh;
    margin: 0;
-   padding: 15px 20px;
+   padding: 8px 20px;
    @include background(url(../images/background.jpg), no-repeat, cover, center);
-   @media only screen and (max-width: 1301px) {
+   @media only screen and (max-width: 1440px) {
       min-width: 1300px;
+      padding: 8px 10px;
+   }
+   @media only screen and (max-width: 1300px) {
+      padding: 8px 0;
    }
 }
 
