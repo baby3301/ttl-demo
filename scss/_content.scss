@@ -61,6 +61,7 @@
 .previews {
    position: relative;
    width: 100%;
+   margin-bottom: 40px;
 
    .title-label {
       display: none;
@@ -293,7 +294,7 @@ $height: 480px;
             @include background(url(../images/direction-view/dong-nam.jpg), no-repeat, cover, center);
          }
          &.bg-vision {
-            @include background(url(../images/vision-view/bien.jpg), no-repeat, cover, center);
+            @include background(url(../images/vision-view/bien.jpg), no-repeat, cover, top center);
          }
          
       }

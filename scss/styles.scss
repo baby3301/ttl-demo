@@ -137,5 +137,18 @@ a {
    }
 }
 
+.page-footer {
+   text-align: center;
+
+   .page-logo {
+      img { margin: 0 auto; max-width: min(200px, 40%); }
+   }
+
+   .text-copyright {
+      font-family: $font-italic;
+      padding: 20px 0 30px;
+   }
+}
+
 
 @import 'responsive';

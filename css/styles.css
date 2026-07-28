@@ -282,6 +282,7 @@ a:focus-visible {
 .previews {
   position: relative;
   width: 100%;
+  margin-bottom: 40px;
 }
 .previews .title-label {
   display: none;
@@ -622,7 +623,7 @@ a:focus-visible {
   background-image: url(../images/vision-view/bien.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
 }
 
 .highlight-room-container {
@@ -1835,6 +1836,18 @@ a:focus-visible {
   87% {
     box-shadow: 0.2em -0.2em 0 0 currentcolor;
   }
+}
+
+.page-footer {
+  text-align: center;
+}
+.page-footer .page-logo img {
+  margin: 0 auto;
+  max-width: min(200px, 40%);
+}
+.page-footer .text-copyright {
+  font-family: "Italic";
+  padding: 20px 0 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
