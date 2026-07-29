@@ -12,6 +12,38 @@ $(document).ready(function () {
 });
 
 function exportImage() {
+   if (onRun) return;
+
+   const inputValue = document.getElementById("search").value;
+   const element = document.body;
+   // const element = document.getElementById('page-wrapper');
+   if (!element) return;
+
+   html2canvas(element, { 
+      useCORS: true,
+      allowTaint: false,
+      onclone: function(clonedDoc) {
+         const textElement = clonedDoc.getElementById('code'); 
+         if (textElement) {
+            //text background not working => remove
+            textElement.style.background = 'none'; 
+            textElement.style.webkitBackgroundClip = 'initial';
+            textElement.style.backgroundClip = 'initial';
+            //add color default
+            textElement.style.webkitTextFillColor = 'initial';
+            textElement.style.color = '#f3d998'; 
+         }
+      }
+   }).then(function(canvas) {
+      const imageURL = canvas.toDataURL("image/png");
+      const link = document.createElement('a');
+      link.href = imageURL;
+      link.download = `${inputValue}-${Date.now()}.png`;
+
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+   });
 
 }
 
