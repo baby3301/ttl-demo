@@ -17,6 +17,7 @@ function exportImage() {
    const inputValue = document.getElementById("search").value;
    const element = document.body;
    // const element = document.getElementById('page-wrapper');
+   // const element = document.getElementById('card-ground');
    if (!element) return;
 
    html2canvas(element, { 
@@ -45,6 +46,38 @@ function exportImage() {
       document.body.removeChild(link);
    });
 
+}
+
+function exportDomToImg() {
+   const inputValue = document.getElementById("search").value || "screenshot";
+   const element = document.body; // Hoặc id của container chứa bản đồ
+   if (!element) return;
+
+   const actionElement = document.getElementById('actions');
+   if (actionElement) {
+      actionElement.style.opacity = 0;
+   }
+
+   domtoimage.toPng(element, {
+      // filter: (node) => node.id !== 'actions'
+      width: element.clientWidth * 2, // Tăng độ nét (scale 2x)
+      height: element.clientHeight * 2,
+      style: {
+         transform: 'scale(2)',
+         transformOrigin: 'top left'
+      }
+   }).then(function (dataUrl) {
+      const link = document.createElement('a');
+      link.download = `${inputValue}-${Date.now()}.png`;
+      link.href = dataUrl;
+      link.click();
+   }).catch(function (error) {
+      console.error('Lỗi khi tạo ảnh:', error);
+   }).finally(function () {
+      if (actionElement) {
+         actionElement.style.opacity = 1; 
+      }
+   });
 }
 
 async function searchCode() {

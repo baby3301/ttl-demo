@@ -28,19 +28,19 @@
    <link href="plugins/bootstrap-4.6.1/css/bootstrap.min.css?v=1" rel="stylesheet">
    <link href="plugins/jquery-confirm/dist/jquery-confirm.min.css?v=1" rel="stylesheet">
    <!-- style -->
-   <link href="css/styles.css?290726.10" rel="stylesheet">
+   <link href="css/styles.css?290726.17" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
    <div class="page-wrapper" id="page-wrapper">
-      <div class="actions" data-html2canvas-ignore="true">
+      <div class="actions" id="actions" data-html2canvas-ignore="true">
          <div class="input-container">
             <input type="text" id="search" placeholder="Nhập mã căn (P1-19-06)"/>
          </div>
          <div class="action-container">
             <button class="btn-search" id="btn-search" disabled onclick="searchCode()">TRA CỨU</button>
-            <button class="btn-download" id="btn-export" disabled onclick="exportImage()">TẢI XUỐNG ẢNH</button>
+            <button class="btn-download" id="btn-export" disabled onclick="exportDomToImg()">TẢI XUỐNG ẢNH</button>
          </div>
       </div>
 
@@ -84,25 +84,25 @@
                      <p class="text-label">Mặt bằng tầng</p>
                   </div>
                   
-                  <div class="card card-ground">
+                  <div class="card card-ground" id="card-ground">
                      <div class="title-label-incard">Mặt bằng tầng</div>
                      <div class="loading-container">
                         <div class="loading-content"><span class="loader"></span></div>
                      </div>
 
-                     <div class="highlight-room-container" id="ground-highlight-container">
-                        <div class="highlight-room-content">
-                           <div class="room-highlight"></div>
-                           <div class="room-highlight-detail">
-                              <div class="line-highlight"></div>
-                              <div class="label-highlight"></div>
+                     <div class="ground-image-container" id="container-ground-view">
+                        <div class="highlight-room-container" id="ground-highlight-container">
+                           <div class="highlight-room-content">
+                              <div class="room-highlight"></div>
+                              <div class="room-highlight-detail">
+                                 <div class="line-highlight"></div>
+                                 <div class="label-highlight"></div>
+                              </div>
                            </div>
                         </div>
-                     </div>
-
-                     <div class="ground-image-container" id="container-ground-view">
                         <img src="./images/ground-default.jpg" class="" id="ground-img" />
                      </div>
+
                   </div>
                </div>
             </div>
@@ -167,7 +167,8 @@
    <!-- Bootstrap Core JavaScript -->
    <script src="plugins/bootstrap-4.6.1/js/bootstrap.min.js?v=1"></script>
    <!-- Canvas screenshot -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> -->
+   <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
 
    <script>
       let onRun = false;

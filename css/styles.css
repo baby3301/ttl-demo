@@ -436,6 +436,8 @@ a:focus-visible {
   display: block;
   object-fit: cover;
   -o-object-fit: cover;
+  object-position: center;
+  -o-object-position: center;
 }
 .preview-top .preview-top-block .dot {
   display: none;
