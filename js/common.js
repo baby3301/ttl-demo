@@ -59,7 +59,7 @@ async function searchCode() {
          minimumDelay
       ]);
       // let config = getConfigByCode(searchValue);
-      console.log(config)
+      // console.log(config)
       if (!config) {
          onRun = false;
          toggleLoading(false)
@@ -89,7 +89,7 @@ function handleResult(codeSearch, configData) {
    document.getElementById("previews").classList.add('focus')
    //overview
    document.getElementById("code").innerHTML = codeSearch;
-   document.getElementById("floor").innerHTML = configData.realFloor;
+   document.getElementById("floor").innerHTML = parseInt(configData.realFloor);
    document.getElementById("type").innerHTML = configData.type;
    document.getElementById("area").innerHTML = configData.area +' M<sup>2</sup>';
    document.getElementById("view").innerHTML = configData.viewLabel;
@@ -141,7 +141,6 @@ function getConfigByCode(code) {
    }
 
    if(!apartmentData) {
-      //alert
       return null;
    }
 
@@ -150,10 +149,7 @@ function getConfigByCode(code) {
       return null
    }
 
-
-
    let cdns = coordinatesDot[firstChar]?.[secondChar]?.[thirdChar] ?? null;
-   // console.log(cdns)
    result.classCode = `${firstChar}${thirdChar}`;
    result.realFloor = secondChar;
 	result.searchCode = code;
@@ -193,7 +189,6 @@ function setHighlightInGround(configData)
 
 function renderDot(coordinates) {
    if (!coordinates) {
-
       return;
    }
 
@@ -203,7 +198,6 @@ function renderDot(coordinates) {
       dot3D.style.top = `${coordinates.y}%`;
    }
    // dot3D.style.display = 'block';
-
    return;
 }
 
