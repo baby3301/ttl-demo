@@ -100,7 +100,7 @@ function exportHtmlToImg() {
          backgroundColor: '#254f4d',
       }).then(function (dataUrl) {
          var link = document.createElement('a');
-         link.download = `${inputValue}_${Date.now()}.png`;
+         link.download = `${inputValue}_ttl_${Date.now()}.jpg`;
          link.href = dataUrl;
          link.click();
       }).catch(function (error) {
