@@ -176,7 +176,7 @@ const apartmentData = {
             "price": "",
             "floor": 5,
             "directionLabel": "Hướng Nam - Đông Nam",
-            "direction": "nam-dong-nam.jpg",
+            "direction": "tay-nam.jpg",
             "view": "bien-vinhhalong.jpg",
             "viewLabel": "Biển - Vịnh Hạ Long",
             "position": 1,
@@ -188,7 +188,7 @@ const apartmentData = {
             "price": "",
             "floor": 5,
             "directionLabel": "Hướng Tây - Đông Nam",
-            "direction": "tay-dong-nam.jpg",
+            "direction": "tay-nam.jpg",
             "view": "bien-halongxanh-vinhhalong.jpg",
             "viewLabel": "Biển - Hạ Long Xanh <br/> - Vịnh Hạ Long",
             "position": 1
@@ -490,7 +490,7 @@ const apartmentData = {
             "price": null,
             "floor": 7,
             "directionLabel": "Hướng Nam - Đông Nam",
-            "direction": "nam-dong-nam.jpg",
+            "direction": "tay-nam.jpg",
             "view": "bien-vinhhalong.jpg",
             "viewLabel": "Biển - Vịnh Hạ Long",
             "position": 1
@@ -772,7 +772,7 @@ const apartmentData = {
             "price": "",
             "floor": 7,
             "directionLabel": "Hướng Nam - Đông Nam",
-            "direction": "nam-dong-nam.jpg",
+            "direction": "nam.jpg",
             "view": "bien-vinhhalong.jpg",
             "viewLabel": "Biển - Vịnh Hạ Long",
             "position": 1

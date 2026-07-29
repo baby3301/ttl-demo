@@ -61,7 +61,7 @@ function handleResult(codeSearch, configData) {
    document.getElementById("type").innerHTML = configData.type;
    document.getElementById("area").innerHTML = configData.area +' M<sup>2</sup>';
    document.getElementById("view").innerHTML = configData.viewLabel;
-   document.getElementById("direction-label").innerHTML = configData.directionLabel;
+   // document.getElementById("direction-label").innerHTML = configData.directionLabel;
 
    //ground
    document.getElementById("container-ground-view").className = "ground-image-container " + codeSearch;
