@@ -80,6 +80,35 @@ function exportDomToImg() {
    });
 }
 
+function exportHtmlToImg() {
+   const inputValue = document.getElementById("search").value || "chican";
+   const element = document.body;
+   if (!element) return;
+
+   var node = document.body;
+
+   var filterEl = function (node) {
+      if (node.id === 'actions') return false;
+      return true;
+   };
+
+   //toPng, toJpeg
+   htmlToImage.toJpeg(node, {
+         filter: filterEl,
+         // quality: 0.8,
+         // pixelRatio: 1,
+         backgroundColor: '#254f4d',
+      }).then(function (dataUrl) {
+         var link = document.createElement('a');
+         link.download = `${inputValue}_${Date.now()}.png`;
+         link.href = dataUrl;
+         link.click();
+      }).catch(function (error) {
+         console.error('Đã xảy ra lỗi khi xuất ảnh: ', error);
+         alertTemplate(true, 'Thông Báo', 'Không thể xuất ảnh, vui lòng thử lại hoặc liên hệ admin!');
+      });
+}
+
 async function searchCode() {
    onRun = true;
    toggleLoading(true);

@@ -28,7 +28,7 @@
    <link href="plugins/bootstrap-4.6.1/css/bootstrap.min.css?v=1" rel="stylesheet">
    <link href="plugins/jquery-confirm/dist/jquery-confirm.min.css?v=1" rel="stylesheet">
    <!-- style -->
-   <link href="css/styles.css?290726.17" rel="stylesheet">
+   <link href="css/styles.css?290726.23" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -40,7 +40,7 @@
          </div>
          <div class="action-container">
             <button class="btn-search" id="btn-search" disabled onclick="searchCode()">TRA CỨU</button>
-            <button class="btn-download" id="btn-export" disabled onclick="exportDomToImg()">TẢI XUỐNG ẢNH</button>
+            <button class="btn-download" id="btn-export" disabled onclick="exportHtmlToImg()">TẢI XUỐNG ẢNH</button>
          </div>
       </div>
 
@@ -166,9 +166,11 @@
    <script src="plugins/jquery-confirm/dist/jquery-confirm.min.js?v=1"></script>
    <!-- Bootstrap Core JavaScript -->
    <script src="plugins/bootstrap-4.6.1/js/bootstrap.min.js?v=1"></script>
-   <!-- Canvas screenshot -->
-   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script> -->
-   <script src="https://cdn.jsdelivr.net/npm/dom-to-image@2.6.0/dist/dom-to-image.min.js"></script>
+
+   <!-- export html view lib -->
+   <!-- <script src="./js/dom-to-image.min.js?v=1.4.1"></script>
+   <script src="./js/dom-to-image.min.js?v=2.6.0"></script> -->
+   <script src="./js/html-to-image.min.js?v=11.1.1"></script>
 
    <script>
       let onRun = false;
