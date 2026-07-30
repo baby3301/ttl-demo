@@ -11,19 +11,64 @@ $(document).ready(function () {
    });
 });
 
-function exportImage() {
-   if (onRun) return;
-   if (onExport) return;
+async function exportImage() {
+   if (onRun || onExport) return;
 
-   const inputValue = document.getElementById("search").value || "primaby";
+   const inputValue = document.getElementById("search").value;
    const element = document.body;
-   if (!element) return;
+   if (!element || !inputValue) return;
 
-   const onExportSuccess = (dataUrl) => {
-      var link = document.createElement('a');
-      link.download = `${inputValue}_ttl_${Date.now()}.jpg`;
-      link.href = dataUrl;
-      link.click();
+   // const onExportSuccess = (dataUrl) => {
+   //    var link = document.createElement('a');
+   //    link.download = `${inputValue}_ttl_${Date.now()}.jpg`;
+   //    link.href = dataUrl;
+   //    link.click();
+   // };
+
+   const onExportSuccess = async (dataUrl) => {
+      try {
+         const fileName = `${inputValue}_ttl_${Date.now()}.jpg`;
+         
+         // CÁCH MỚI: Dùng fetch để chuyển đổi Data URL thành Blob an toàn 100%
+         const response = await fetch(dataUrl);
+         const blob = await response.blob();
+
+         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+         
+         if (isMobile && navigator.canShare) {
+            // Xử lý riêng cho Mobile: Mở bảng chia sẻ
+            const file = new File([blob], fileName, { type: 'image/jpeg' });
+            await navigator.share({
+               files: [file],
+               title: 'Exported Image',
+            });
+         } else {
+            // Xử lý cho PC: Tải file thẳng xuống máy
+            const blobUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.download = fileName;
+            link.href = blobUrl;
+            
+            // Ẩn link đi để không ảnh hưởng UI
+            link.style.display = 'none';
+            document.body.appendChild(link); 
+            link.click();
+            
+            // Dọn dẹp DOM và giải phóng bộ nhớ
+            document.body.removeChild(link);
+            setTimeout(() => URL.revokeObjectURL(blobUrl), 1000); 
+         }
+      } catch (error) {
+         // NẾU vẫn nhảy vào đây, hãy F12 xem lỗi cụ thể là gì
+         console.error("Lỗi chi tiết khi tải/chia sẻ ảnh:", error);
+         
+         // Fallback mở tab mới
+         const win = window.open();
+         if (win) {
+            win.document.write(`<img src="${dataUrl}" style="width:100%; height:auto;" />`);
+            win.document.title = "Nhấn chuột phải để lưu ảnh";
+         }
+      }
    };
 
    const onExportError = (error) => {
@@ -42,29 +87,59 @@ function exportImage() {
       cacheBust: false,
    };
 
-   if (isIOSorSafari()) {
-      console.log('isIOSorSafari: render 2 time');
+   try {
+      const highlightEl = document.getElementById('ground-highlight-container');
+      const dot3dEl = document.getElementById('dot-3d');
+      
+      if (highlightEl) highlightEl.classList.add('ios-export-mode');
+      if (dot3dEl) dot3dEl.classList.add('ios-export-mode');
 
-      document.getElementById('ground-highlight-container').classList.add('ios-export-mode');
-      document.getElementById('dot-3d').classList.add('ios-export-mode');
+      // BƯỚC QUAN TRỌNG 1: Dừng lại 300ms để trình duyệt kịp Repaint UI
+      await new Promise(resolve => setTimeout(resolve, 300)); 
 
-      htmlToImage.toJpeg(element, configToJpg)
-         .then(() => new Promise(resolve => setTimeout(resolve, 100))) // timeout 100ms
-         .then(() => htmlToImage.toJpeg(element, configToJpg))
-         .then(onExportSuccess)
-         .catch(onExportError)
-         .finally(function () {
-            document.getElementById('ground-highlight-container').classList.remove('ios-export-mode');
-            document.getElementById('dot-3d').classList.remove('ios-export-mode');
-            toggleLoadingMenu(false);
-         });
-         
-   } else {
-      htmlToImage.toJpeg(element, configToJpg)
-         .then(onExportSuccess)
-         .catch(onExportError)
-         .finally(function () { toggleLoadingMenu(false) });
+      // BƯỚC QUAN TRỌNG 2: Render mồi (Warm-up pass) cho mọi trình duyệt
+      // Bước này ép html-to-image dịch tất cả ảnh sang Base64 ngầm
+      await htmlToImage.toJpeg(element, configToJpg).catch(() => {});
+      
+      // BƯỚC QUAN TRỌNG 3: Render thật và tải xuống
+      const dataUrl = await htmlToImage.toJpeg(element, configToJpg);
+      onExportSuccess(dataUrl);
+
+   } catch (error) {
+      onExportError(error);
+   } finally {
+      const highlightEl = document.getElementById('ground-highlight-container');
+      const dot3dEl = document.getElementById('dot-3d');
+      
+      if (highlightEl) highlightEl.classList.remove('ios-export-mode');
+      if (dot3dEl) dot3dEl.classList.remove('ios-export-mode');
+      
+      toggleLoadingMenu(false);
    }
+
+   // if (isIOSorSafari()) {
+   //    console.log('isIOSorSafari: render 2 time');
+
+   //    document.getElementById('ground-highlight-container').classList.add('ios-export-mode');
+   //    document.getElementById('dot-3d').classList.add('ios-export-mode');
+
+   //    htmlToImage.toJpeg(element, configToJpg)
+   //       .then(() => new Promise(resolve => setTimeout(resolve, 100))) // timeout 100ms
+   //       .then(() => htmlToImage.toJpeg(element, configToJpg))
+   //       .then(onExportSuccess)
+   //       .catch(onExportError)
+   //       .finally(function () {
+   //          document.getElementById('ground-highlight-container').classList.remove('ios-export-mode');
+   //          document.getElementById('dot-3d').classList.remove('ios-export-mode');
+   //          toggleLoadingMenu(false);
+   //       });
+         
+   // } else {
+   //    htmlToImage.toJpeg(element, configToJpg)
+   //       .then(onExportSuccess)
+   //       .catch(onExportError)
+   //       .finally(function () { toggleLoadingMenu(false) });
+   // }
 }
 
 function exportHtmlToImg() {
@@ -151,7 +226,7 @@ function handleResult(codeSearch, configData) {
    // document.getElementById("direction-label").innerHTML = configData.directionLabel;
 
    //ground
-   document.getElementById("container-ground-view").className = "ground-image-container " + codeSearch;
+   // document.getElementById("container-ground-view").className = "ground-image-container " + codeSearch;
    let sourceGround = "images/ground-default.jpg";
    if (configData.floor == 5) {
       sourceGround = "images/ground-floor5.jpg";
