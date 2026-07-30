@@ -28,19 +28,24 @@
    <link href="plugins/bootstrap-4.6.1/css/bootstrap.min.css?v=1" rel="stylesheet">
    <link href="plugins/jquery-confirm/dist/jquery-confirm.min.css?v=1" rel="stylesheet">
    <!-- style -->
-   <link href="css/styles.css?v=300726.9" rel="stylesheet">
+   <link href="css/styles.css?v=11" rel="stylesheet">
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
 
    <div class="page-wrapper" id="page-wrapper">
-      <div class="actions" id="actions" data-html2canvas-ignore="true">
+      <div class="actions" id="actions">
+
+         <div class="menu-loading-container" id="loading-menu">
+            <div class="loading-content"><div class="loader"></div></div>
+         </div>
+
          <div class="input-container">
             <input type="text" id="search" placeholder="Nhập mã căn (P1-19-06)"/>
          </div>
          <div class="action-container">
             <button class="btn-search" id="btn-search" disabled onclick="searchCode()">TRA CỨU</button>
-            <button class="btn-download" id="btn-export" disabled onclick="exportHtmlToImg()">TẢI XUỐNG ẢNH</button>
+            <button class="btn-download" id="btn-export" disabled onclick="exportImage()">TẢI XUỐNG ẢNH</button>
          </div>
       </div>
 
@@ -174,6 +179,7 @@
 
    <script>
       let onRun = false;
+      let onExport = false;
       const inputElement = document.getElementById('search');
       // const errorElement = document.getElementById('errorMessage');
 
@@ -237,7 +243,7 @@
    <!-- Common JS -->
    <script src="./config/data.js"></script>
    <script src="./config/coordinates.js"></script>
-   <script src="js/common.js?v=20260730"></script>
+   <script src="js/common.js?v=11"></script>
 </body>
 
 </html>

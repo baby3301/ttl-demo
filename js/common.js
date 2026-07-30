@@ -13,44 +13,60 @@ $(document).ready(function () {
 
 function exportImage() {
    if (onRun) return;
+   if (onExport) return;
 
-   const inputValue = document.getElementById("search").value;
+   const inputValue = document.getElementById("search").value || "primaby";
    const element = document.body;
-   // const element = document.getElementById('page-wrapper');
-   // const element = document.getElementById('card-ground');
    if (!element) return;
 
-   html2canvas(element, { 
-      useCORS: true,
-      allowTaint: false,
-      onclone: function(clonedDoc) {
-         const textElement = clonedDoc.getElementById('code'); 
-         if (textElement) {
-            //text background not working => remove
-            textElement.style.background = 'none'; 
-            textElement.style.webkitBackgroundClip = 'initial';
-            textElement.style.backgroundClip = 'initial';
-            //add color default
-            textElement.style.webkitTextFillColor = 'initial';
-            textElement.style.color = '#f3d998'; 
-         }
-      }
-   }).then(function(canvas) {
-      const imageURL = canvas.toDataURL("image/png");
-      const link = document.createElement('a');
-      link.href = imageURL;
-      link.download = `${inputValue}-${Date.now()}.png`;
-
-      document.body.appendChild(link);
+   const onExportSuccess = (dataUrl) => {
+      var link = document.createElement('a');
+      link.download = `${inputValue}_ttl_${Date.now()}.jpg`;
+      link.href = dataUrl;
       link.click();
-      document.body.removeChild(link);
-   });
+   };
+
+   const onExportError = (error) => {
+      console.error('error when exportImage:', error);
+      alertTemplate(true, 'Thông Báo', 'Không thể xuất ảnh, vui lòng thử lại hoặc liên hệ admin!');
+   };
+
+   toggleLoadingMenu(true);
+
+   let filterEl = function (node) {
+      if (node.id === 'actions') return false;
+      return true;
+   };
+   const configToJpg = {
+      filter: filterEl,
+      cacheBust: true,
+   };
+
+   if (isIOSorSafari()) {
+      console.log('isIOSorSafari: render 2 time');
+
+      htmlToImage.toJpeg(element, configToJpg)
+         .then(() => new Promise(resolve => setTimeout(resolve, 100))) // timeout 50ms
+         .then(() => htmlToImage.toJpeg(element, configToJpg))
+         .then(onExportSuccess)
+         .catch(onExportError)
+         .finally(function () { toggleLoadingMenu(false) });
+         
+   } else {
+      htmlToImage.toJpeg(element, configToJpg)
+         .then(onExportSuccess)
+         .catch(onExportError)
+         .finally(function () { toggleLoadingMenu(false) });
+   }
 
 }
 
 function exportDomToImg() {
+   if (onRun) return;
+   if (onExport) return;
+
    const inputValue = document.getElementById("search").value || "screenshot";
-   const element = document.body; // Hoặc id của container chứa bản đồ
+   const element = document.body;
    if (!element) return;
 
    const actionElement = document.getElementById('actions');
@@ -81,20 +97,24 @@ function exportDomToImg() {
 }
 
 function exportHtmlToImg() {
+   if (onRun) return;
+   if (onExport) return;
+
    const inputValue = document.getElementById("search").value || "chican";
    const element = document.body;
    if (!element) return;
 
-   var node = document.body;
+   toggleLoading(true);
 
-   var filterEl = function (node) {
+   let filterEl = function (node) {
       if (node.id === 'actions') return false;
       return true;
    };
 
    //toPng, toJpeg
-   htmlToImage.toJpeg(node, {
+   htmlToImage.toJpeg(element, {
          filter: filterEl,
+         cacheBust: true,
          // quality: 0.8,
          // pixelRatio: 1,
          // backgroundColor: '#254f4d',
@@ -106,6 +126,8 @@ function exportHtmlToImg() {
       }).catch(function (error) {
          console.error('Đã xảy ra lỗi khi xuất ảnh: ', error);
          alertTemplate(true, 'Thông Báo', 'Không thể xuất ảnh, vui lòng thử lại hoặc liên hệ admin!');
+      }).finally(function () {
+         toggleLoading(false);
       });
 }
 
@@ -276,6 +298,15 @@ function toggleLoading(show){
    }
 }
 
+function toggleLoadingMenu(show) {
+   const loadingMenu = document.getElementById('loading-menu')
+   if (show) {
+      loadingMenu.style.display = 'block';
+   } else {
+      loadingMenu.style.display = 'none';
+   }
+}
+
 function alertTemplate(success = true, title, msg) {
    if (success) {
       $.confirm({
@@ -306,4 +337,30 @@ function alertTemplate(success = true, title, msg) {
          }
       });
    }
+}
+
+
+function isSafariBrowser() {
+   const ua = navigator.userAgent.toLowerCase();
+   const vendor = navigator.vendor;
+   
+   // Trình duyệt của Apple thường có vendor chứa chữ "Apple"
+   const isApple = vendor && vendor.includes('Apple');
+   // Loại trừ Chrome (CriOS) và Firefox (FxiOS) trên iOS
+   const isNotChromeOrFirefox = !ua.includes('crios') && !ua.includes('fxios');
+
+   return isApple && isNotChromeOrFirefox;
+}
+
+function isIOSorSafari() {
+   const ua = navigator.userAgent.toLowerCase();
+   
+   // 1. Kiểm tra xem có phải thiết bị iOS không (iPhone, iPad, iPod)
+   // Lưu ý: iPadOS mới dùng chung userAgent với Mac, nên cần check thêm maxTouchPoints
+   const isIOS = /iphone|ipad|ipod/.test(ua) || 
+               (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+   // 2. Kiểm tra Safari trên Mac
+   const isMacSafari = navigator.vendor && navigator.vendor.includes('Apple') && 
+                     !ua.includes('crios') && !ua.includes('fxios');           
+   return isIOS || isMacSafari;
 }
