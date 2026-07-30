@@ -39,7 +39,7 @@ function exportImage() {
    };
    const configToJpg = {
       filter: filterEl,
-      cacheBust: true,
+      cacheBust: false,
    };
 
    if (isIOSorSafari()) {
@@ -49,13 +49,13 @@ function exportImage() {
       document.getElementById('dot-3d').classList.add('ios-export-mode');
 
       htmlToImage.toJpeg(element, configToJpg)
-         .then(() => new Promise(resolve => setTimeout(resolve, 100))) // timeout 50ms
+         .then(() => new Promise(resolve => setTimeout(resolve, 100))) // timeout 100ms
          .then(() => htmlToImage.toJpeg(element, configToJpg))
          .then(onExportSuccess)
          .catch(onExportError)
          .finally(function () {
-            document.getElementById('ground-highlight-container').classList.add('ios-export-mode');
-            document.getElementById('dot-3d').classList.add('ios-export-mode');
+            document.getElementById('ground-highlight-container').classList.remove('ios-export-mode');
+            document.getElementById('dot-3d').classList.remove('ios-export-mode');
             toggleLoadingMenu(false);
          });
          
