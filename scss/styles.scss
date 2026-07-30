@@ -139,6 +139,13 @@ a {
 }
 
 
+.ios-export-mode, 
+.ios-export-mode * {
+   animation: none !important;
+   transition: none !important; /* Nên tắt cả transition để tránh lỗi nhòe ảnh */
+   box-shadow: none !important;
+}
+
 .menu-loading-container {
    position: absolute;
    z-index: 1;

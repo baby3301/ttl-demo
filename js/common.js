@@ -45,12 +45,19 @@ function exportImage() {
    if (isIOSorSafari()) {
       console.log('isIOSorSafari: render 2 time');
 
+      document.getElementById('ground-highlight-container').classList.add('ios-export-mode');
+      document.getElementById('dot-3d').classList.add('ios-export-mode');
+
       htmlToImage.toJpeg(element, configToJpg)
          .then(() => new Promise(resolve => setTimeout(resolve, 100))) // timeout 50ms
          .then(() => htmlToImage.toJpeg(element, configToJpg))
          .then(onExportSuccess)
          .catch(onExportError)
-         .finally(function () { toggleLoadingMenu(false) });
+         .finally(function () {
+            document.getElementById('ground-highlight-container').classList.add('ios-export-mode');
+            document.getElementById('dot-3d').classList.add('ios-export-mode');
+            toggleLoadingMenu(false);
+         });
          
    } else {
       htmlToImage.toJpeg(element, configToJpg)
@@ -58,8 +65,9 @@ function exportImage() {
          .catch(onExportError)
          .finally(function () { toggleLoadingMenu(false) });
    }
-
 }
+
+
 
 function exportDomToImg() {
    if (onRun) return;
