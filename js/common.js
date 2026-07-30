@@ -97,7 +97,7 @@ function exportHtmlToImg() {
          filter: filterEl,
          // quality: 0.8,
          // pixelRatio: 1,
-         backgroundColor: '#254f4d',
+         // backgroundColor: '#254f4d',
       }).then(function (dataUrl) {
          var link = document.createElement('a');
          link.download = `${inputValue}_ttl_${Date.now()}.jpg`;
